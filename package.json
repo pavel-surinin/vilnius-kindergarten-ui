@@ -1,0 +1,19 @@
+{
+  "name": "vilnius-kindergarten-ui",
+  "version": "1.0.0",
+  "description": "\"# ui\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pavel-surinin/vilnius-kindergarten-ui.git"
+  },
+  "author": "psurinin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pavel-surinin/vilnius-kindergarten-ui/issues"
+  },
+  "homepage": "https://github.com/pavel-surinin/vilnius-kindergarten-ui#readme"
+}
