@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 import ReactDOM from 'react-dom';
-import styles from './styles/style.css'
+import styles from './styles/style.css' // eslint-disable-line no-unused-vars
 
 class App extends React.Component{
   render () {
