@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 import ReactDOM from 'react-dom';
+import styles from './styles/style.css'
 
 class App extends React.Component{
   render () {
@@ -13,4 +14,4 @@ App.propTypes = {
   name: PropTypes.string,
 };
 
-ReactDOM.render(<App name='react'/>, document.getElementById("app"));
+ReactDOM.render(<App name='reactas'/>, document.getElementById("app"));
