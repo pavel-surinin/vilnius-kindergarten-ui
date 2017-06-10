@@ -15,8 +15,10 @@ module.exports = {
         }
       },
       {
+        // test: /\.css$/,
+        // loaders: [ 'style-loader', 'css-loader' ]
         test: /\.css$/,
-        loaders: [ 'style-loader', 'css-loader' ]
+        loader: 'style-loader!css-loader?modules&importLoaders=1&localIdentName=[name]_[local]_[hash:base64:5]'
       }
     ]
   },
