@@ -10,7 +10,7 @@ export class Header extends React.Component {
   render(){
       return (
         <div className={styles.underlineHeader}>
-          <h3 className={styles.headerText}>Hello,
+          <h3 className={styles.headerText}>Hello, 
             <span id={styles.headeris}>{this.state.name}</span>
             !
           </h3>
