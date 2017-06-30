@@ -65,3 +65,26 @@ JSX is syntax in JavaScript, where you can write "xml like" code [documentaiton]
 Main rules in JSX:
 - we must have all our code wrapped in some jsx tag, in this case it is h3
 - all injection like functions - {showMyName()}, variables - {name} or just some logic - {3 + this.props.numer} in jsx must be in curly braces
+
+# Styling components
+
+## Styling with global CSS
+Simple way to input css in html head tag, add cdn link or import in class where you rendering your app
+## Styling with componet CSS with unique className
+To get hashed className you need to import css like object
+```
+import styles from './header.css'
+```
+use className as styles.fancyStyle
+```
+<div className={styles.fancyStyle}>
+```
+add to webpack option to loader
+```
+options: {
+ modules: true,
+ localIdentName: '[path][name]__[local]--[hash:base64:5]'
+}
+```
+## Styling with inline styles in JSX and separate file
+## Styling with Less
