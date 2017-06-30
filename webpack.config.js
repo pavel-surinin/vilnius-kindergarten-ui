@@ -16,6 +16,7 @@ module.exports = {
       },
       {
  test: /\.css$/,
+ // https://github.com/webpack-contrib/css-loader
  use: [
     'style-loader',
     {
