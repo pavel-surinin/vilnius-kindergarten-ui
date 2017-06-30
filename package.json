@@ -21,7 +21,7 @@
   "homepage": "https://github.com/pavel-surinin/vilnius-kindergarten-ui#readme",
   "dependencies": {
     "react": "^15.5.4",
-    "react-dom": "^15.5.4",
+    "react-dom": "^15.5.4"
   },
   "devDependencies": {
     "babel-core": "^6.24.1",

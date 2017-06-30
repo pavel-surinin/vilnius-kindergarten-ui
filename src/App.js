@@ -9,6 +9,10 @@ export class App extends React.Component{
     return (
       <div>
         <Header name='ComponentHeader'/>
+        {/*TODO create these components to finish page template*/}
+        {/*<Navigation>*/}
+        {/*Body*/}
+        {/*Footer*/}
         <FunctionalHeader name='FunctionalHeader'/>
       </div>
     )

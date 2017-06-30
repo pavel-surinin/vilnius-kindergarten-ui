@@ -1,6 +1,6 @@
 # Create react application
 
-##To create react application we will use:
+## To create react application we will use:
 
 - NPM (node package manager) as a package manager [documentaiton](https://docs.npmjs.com/files/package.json)
 NPM is configured in package.json, that must be on the root folder of your project. For now we need few blocks:
@@ -63,5 +63,5 @@ JSX is syntax in JavaScript, where you can write "xml like" code [documentaiton]
 </h3>
 ```
 Main rules in JSX:
-- we must have all our code wrapped in some jsx tag, in this case it is <h3>
+- we must have all our code wrapped in some jsx tag, in this case it is h3
 - all injection like functions - {showMyName()}, variables - {name} or just some logic - {3 + this.props.numer} in jsx must be in curly braces
