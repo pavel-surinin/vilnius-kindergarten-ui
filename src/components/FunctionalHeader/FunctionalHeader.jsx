@@ -2,8 +2,8 @@ import React from 'react' // eslint-disable-line no-unused-vars
 import propTypes from 'prop-types'
 import {styles} from './styles'
 
-export function FunctionalHeader(props) {
-  const name = `yo, ${props.name}`
+export function FunctionalHeader({name}) {
+  const name = `yo, ${name}`
   return (
     <div style={styles.header}>
       <h3>Hello,
