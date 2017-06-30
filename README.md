@@ -1,6 +1,6 @@
-h1. Create react application
+# Create react application
 
-To create react application we will use:
+##To create react application we will use:
 
 - NPM (node package manager) as a package manager [documentaiton](https://docs.npmjs.com/files/package.json)
 NPM is configured in package.json, that must be on the root folder of your project. For now we need few blocks:
@@ -13,12 +13,12 @@ We will use ES6 in our code, that is not supported by browsers, here webpack wil
 Webpack config must be in source folder of our project, that is webpack.config.js
 For now we will modify only moulde.loaders object in webpack config.
 
-h1. Components
+# Components
 
 React components can be "functional" or "extending React.Component"
 [documentation](https://facebook.github.io/react/docs/components-and-props.html)
 
-h2. Functional Component
+## Functional Component
 Functional component it is JavaScript function with JSX or without it in return. It is mostly used for rendering simple components when you don't need React lifecycle hooks.
 ~~~~
 export function FunctionalHeader({name}) {
@@ -35,7 +35,7 @@ export function FunctionalHeader({name}) {
 }
 ~~~~
 
-h2. React Component
+## React Component
 React component sis used when you need lifecycle hooks. [documentation](https://facebook.github.io/react/docs/react-component.html)
 ~~~~
 export class Header extends React.Component {
@@ -54,7 +54,7 @@ export class Header extends React.Component {
 }
 ~~~~
 
-h2. JSX
+## JSX
 JSX is syntax in JavaScript, where you can write "xml like" code [documentaiton](https://facebook.github.io/react/docs/jsx-in-depth.html)
 ```
 <h3>Hello,
