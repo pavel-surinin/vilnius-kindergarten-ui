@@ -6,7 +6,7 @@ To create react application we will use:
 
 NPM is configured in package.json, that must be on the root folder of your project. For now we need few blocks:
 - - dependencies: all modules that our app uses
-- - devDependencies: modules, that we use in development, like bundlers, test libs, linters ...
+- - devDependencies: modules, that we use in development, like bundlers, test libs, linters ....
 - - scripts: scrpits that we can run to bundle, test or else
 
 - Webpack as code bundler [documentaion](https://webpack.github.io/docs/configuration.html)
