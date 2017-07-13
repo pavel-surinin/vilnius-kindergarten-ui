@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/pavel-surinin/vilnius-kindergarten-ui#readme",
   "dependencies": {
+    "html-webpack-plugin": "^2.29.0",
     "less": "^2.7.2",
     "react": "^15.5.4",
     "react-dom": "^15.5.4"
