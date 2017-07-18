@@ -1,50 +1,28 @@
 {
-  "name": "vilnius-kindergarten-ui",
-  "version": "1.0.0",
-  "description": "\"# ui\"",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "auto-rebuild": "webpack --progress --watch -d",
-    "webpack": "webpack -p",
-    "dev": "webpack-dev-server --content-base build/"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/pavel-surinin/vilnius-kindergarten-ui.git"
-  },
-  "author": "psurinin",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/pavel-surinin/vilnius-kindergarten-ui/issues"
-  },
-  "homepage": "https://github.com/pavel-surinin/vilnius-kindergarten-ui#readme",
+  "name": "react-workshop",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "html-webpack-plugin": "^2.29.0",
-    "less": "^2.7.2",
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4"
-  },
-  "devDependencies": {
-    "@types/jquery": "^3.2.7",
-    "@types/node": "^8.0.11",
+    "@types/jest": "^20.0.2",
+    "@types/node": "^8.0.13",
     "@types/react": "^15.0.38",
     "@types/react-dom": "^15.5.1",
-    "babel-core": "^6.24.1",
-    "babel-eslint": "^7.2.3",
-    "babel-loader": "^7.0.0",
-    "babel-preset-env": "^1.5.1",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-react": "^6.24.1",
-    "css-loader": "^0.28.4",
-    "eslint": "^3.19.0",
-    "eslint-plugin-react": "^7.0.1",
-    "less-loader": "^4.0.4",
-    "style-loader": "^0.18.2",
-    "ts-loader": "^2.2.2",
-    "tslint": "^5.5.0",
-    "typescript": "^2.4.1",
-    "webpack": "^2.6.1",
-    "webpack-dev-server": "^2.5.0"
+    "@types/reactstrap": "^4.3.8",
+    "bootstrap": "^4.0.0-alpha.6",
+    "react": "^15.6.1",
+    "react-addons-css-transition-group": "^15.6.0",
+    "react-addons-transition-group": "^15.6.0",
+    "react-dom": "^15.6.1",
+    "react-scripts-ts": "2.4.0",
+    "reactstrap": "^4.8.0"
+  },
+  "devDependencies": {
+    "@types/bootstrap": "^3.3.35"
+  },
+  "scripts": {
+    "start": "react-scripts-ts start",
+    "build": "react-scripts-ts build",
+    "test": "react-scripts-ts test --env=jsdom",
+    "eject": "react-scripts-ts eject"
   }
 }
