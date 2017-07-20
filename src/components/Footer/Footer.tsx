@@ -3,6 +3,7 @@ import { Container, Row, Col, Alert } from 'reactstrap';
 import { InlineForm } from '../InlineForm/InlineForm';
 import './Footer.css';
 
+// define state interface
 export interface FooterState {
   nameValue: string;
   emailValue: string;
@@ -10,6 +11,7 @@ export interface FooterState {
 }
 
 export class Footer extends React.Component<{}, FooterState> {
+  // in constructor we define initial state
   constructor(props: FooterState) {
     super(props);
     this.state = {
@@ -19,7 +21,8 @@ export class Footer extends React.Component<{}, FooterState> {
     };
   }
 
-  renderSuccesMessage = () => {
+  // call this function whent you want to render succes method
+  renderSuccesMessage = (): JSX.Element => {
     return(
       <Alert color="info">
         <strong>You have just registered to newsletter</strong>
@@ -30,17 +33,22 @@ export class Footer extends React.Component<{}, FooterState> {
       </Alert>
     );
   }
-
+  // pass this function to InlineForm props to move data up
   onHandleContactsFormSubmit = (event: React.FormEvent<HTMLFormElement>): void => {
+    // prevents default action when form is being submitted. In this case we prevent refreshing page
     event.preventDefault();
+    // expr1 && expr2 - if expr1 == true, then execute expr2
+
     if (this.state.emailValue && this.state.nameValue) {
       this.setState({isSuccesMessage : true});
     }
   }
-  onHandleInputNameChange = (event: React.FormEvent<HTMLInputElement>) => {
+  // pass this function to InlineForm props to move data up
+  onHandleInputNameChange = (event: React.FormEvent<HTMLInputElement>): void => {
     this.setState({nameValue: event.currentTarget.value});
   }
-  onHandleInputEmailChange = (event: React.FormEvent<HTMLInputElement>) => {
+  // pass this function to InlineForm props to move data up
+  onHandleInputEmailChange = (event: React.FormEvent<HTMLInputElement>): void => {
     this.setState({emailValue: event.currentTarget.value});
   }
 
