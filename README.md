@@ -1,4 +1,4 @@
-# RactWednesdays#2
+# ReactWednesdays#2
 
 This time we will use preconfigured project called "create-react-app" with TypeScript 
 
@@ -33,7 +33,7 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.<br>
 Your app is ready to be deployed!
 
-##TypeScript 
+## TypeScript 
 
 TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.
 With tpeScript we will define all variables types, parameters types, function return types.
