@@ -1,24 +1,26 @@
 import * as React from 'react';
-import './App.css';
+import { Route } from 'react-router-dom';
+import { ContentComponent } from './components/ContentComponent/ContentComponent';
 import { Header } from './components/Header/Header';
 import { NavBar } from './components/NavBar/NavBar';
 import { Footer } from './components/Footer/Footer';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { Garden } from './components/Garden/Garden';
+import './App.css';
 
-class App extends React.Component<{}, {}> {
+export class App extends React.Component<{}, {}> {
   render() {
     return (
-      <BrowserRouter>
       <div>
         <Header title="ReactHeader" />
         <NavBar/>
         <div className="app-content">
-            <Route path="test" component={Header}/>
-          {/*this.props.children*/}
+          <Route exact={true} path="/" render={() => <p>home</p>}/>
+          <Route path="/test" render={() => <p>test</p>}/>
+          <Route path="/gardens" exact={true} component={ContentComponent}/>
+          <Route path="/gardens/:id" component={Garden}/>
         </div>
         <Footer/>
       </div>
-      </BrowserRouter>
     );
   }
 }

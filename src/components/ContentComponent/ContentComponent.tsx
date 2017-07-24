@@ -1,6 +1,7 @@
 import * as React from 'react';
 import './content-component.css';
 import { Table } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
 export interface ContentComponentProps {
   kindergartens: Kindergarten[];
@@ -13,14 +14,19 @@ export interface Kindergarten {
   isPrivate: boolean;
 }
 
+const kindApi: Kindergarten[] = [
+  {id: 0, name: 'Centro', adress: 'gedimino g. 9', isPrivate: true},
+  {id: 1, name: 'Pakrascio', adress: 'kaimo g. 69', isPrivate: false}
+];
+
 export class ContentComponent extends React.Component<ContentComponentProps, {}> {
   renderKindergartenList() {
     // create rows in table
-    const kindList = this.props.kindergartens.map((kin, idx, aaa) => {
+    const kindList = kindApi.map((kin, idx, aaa) => {
       return (
         <tr key={idx}>
-          <th scope="row">{idx}</th>
-          <td>{kin.name}</td>
+          <th scope="row">{idx + 1}</th>
+          <td><Link to={`gardens/${kin.id}`}>{kin.name}</Link></td>
           <td>{kin.adress}</td>
           <td>{kin.isPrivate ? 'private' : 'public'}</td>
         </tr>
@@ -34,7 +40,7 @@ export class ContentComponent extends React.Component<ContentComponentProps, {}>
             <th>#</th>
             <th>Name</th>
             <th>Addres</th>
-            <th>isPrivate</th>
+            <th>Type</th>
           </tr>
         </thead>
         <tbody>
