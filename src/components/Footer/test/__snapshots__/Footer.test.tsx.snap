@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer Component renders correctly 1`] = `
+<div
+  className="app-footer"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col-3"
+      >
+        somea cool links
+      </div>
+      <div
+        className="col-6"
+      />
+      <div
+        className="col-3"
+      >
+        <form
+          onSubmit={[Function]}
+        >
+          <div>
+            <input
+              className="form-control"
+              name="name"
+              onChange={[Function]}
+              placeholder="name"
+              type="text"
+            />
+            <input
+              className="form-control"
+              name="email"
+              onChange={[Function]}
+              placeholder="email"
+              type="email"
+            />
+            <button
+              className="btn btn-secondary"
+              onClick={[Function]}
+              type={undefined}
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Footer Component renders mock date 1`] = `14823633672`;

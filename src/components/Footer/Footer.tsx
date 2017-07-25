@@ -57,7 +57,7 @@ export class Footer extends React.Component<{}, FooterState> {
       <div className="app-footer">
         <Container>
          <Row>
-           <Col xs="3">some cool links</Col>
+           <Col xs="3">somea cool links</Col>
            <Col xs="6">
             {this.state.isSuccesMessage && this.renderSuccesMessage()}
            </Col>

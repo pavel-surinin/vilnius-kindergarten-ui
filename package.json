@@ -20,7 +20,9 @@
     "reactstrap": "^4.8.0"
   },
   "devDependencies": {
-    "@types/bootstrap": "^3.3.35"
+    "@types/bootstrap": "^3.3.35",
+    "@types/react-test-renderer": "^15.5.2",
+    "react-test-renderer": "^15.6.1"
   },
   "scripts": {
     "start": "react-scripts-ts start",
