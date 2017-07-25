@@ -2,6 +2,7 @@ import * as React from 'react';
 import './content-component.css';
 import { Table } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 export interface ContentComponentProps {
   kindergartens: Kindergarten[];
@@ -9,30 +10,43 @@ export interface ContentComponentProps {
 
 export interface Kindergarten {
   id: number;
-  name: string;
-  adress: string;
-  isPrivate: boolean;
+  label: string;
+  address: string;
+  buildDate: string;
+  elderate: string;
+  email: string;
+  phone: string;
+  schoolType: string;
+  www: string;
+  idFromSource: number;
 }
 
-const kindApi: Kindergarten[] = [
-  {id: 0, name: 'Centro', adress: 'gedimino g. 9', isPrivate: true},
-  {id: 1, name: 'Pakrascio', adress: 'kaimo g. 69', isPrivate: false}
-];
+export class ContentComponent extends React.Component<ContentComponentProps, {gardens: Kindergarten[]}> {
+  constructor(props: ContentComponentProps) {
+    super(props);
+    this.state = {gardens: []};
+  }
 
-export class ContentComponent extends React.Component<ContentComponentProps, {}> {
+  componentWillMount() {
+    axios
+    .get('https://safe-mesa-80356.herokuapp.com/api/garden')
+    .then(res => this.setState({gardens: res.data}))
+    .catch(err => {throw new ReferenceError('Failed to load gardens data'); });
+  }
+
   renderKindergartenList() {
     // create rows in table
-    const kindList = kindApi.map((kin, idx, aaa) => {
+    const kindList = this.state.gardens.map((kin, idx, aaa) => {
       return (
         <tr key={idx}>
           <th scope="row">{idx + 1}</th>
-          <td><Link to={`gardens/${kin.id}`}>{kin.name}</Link></td>
-          <td>{kin.adress}</td>
-          <td>{kin.isPrivate ? 'private' : 'public'}</td>
+          <td><Link to={`gardens/${kin.id}`}>{kin.label}</Link></td>
+          <td>{kin.address}</td>
+          <td>{kin.elderate}</td>
         </tr>
       );
     });
-    // return table
+    // return tab
     return (
       <Table>
         <thead>
@@ -51,7 +65,7 @@ export class ContentComponent extends React.Component<ContentComponentProps, {}>
   }
 
   render() {
-    return (
+    return this.state.gardens.length === 0 ? <div>Loading...</div> : (
       <div>
         {this.renderKindergartenList()}
       </div>);

@@ -9,6 +9,7 @@
     "@types/react-dom": "^15.5.1",
     "@types/react-router-dom": "^4.0.7",
     "@types/reactstrap": "^4.3.8",
+    "axios": "^0.16.2",
     "bootstrap": "^4.0.0-alpha.6",
     "react": "^15.6.1",
     "react-addons-css-transition-group": "^15.6.0",
