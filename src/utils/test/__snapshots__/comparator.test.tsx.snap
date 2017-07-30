@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Compare functions should return 3 kidergardens with highset build date (ST) 1`] = `
+Array [
+  id: 1 build date: 2008-01-26T15:52:14+02:00 www: string,
+  id: 2 build date: 2020-09-29T07:58:57+03:00 www: string,
+  id: 3 build date: 2005-03-21T00:25:34+02:00 www: string,
+  id: 4 build date: 2017-07-29T22:50:34+03:00 www: string,
+  id: 5 build date: 2001-09-24T21:18:54+03:00 www: string,
+  id: 6 build date: 2002-01-19T15:05:34+02:00 www: string,
+  id: 7 build date: 2008-09-14T04:25:34+03:00 www: string,
+  id: 8 build date: 1998-08-04T21:32:14+03:00 www: string,
+  id: 9 build date: 2027-09-19T15:05:34+03:00 www: ,
+]
+`;
+
+exports[`Compare functions should return 3 kidergardens with highset build date (ST) 2`] = `
+Array [
+  id: 2 build date: 2020-09-29T07:58:57+03:00 www: string,
+  id: 4 build date: 2017-07-29T22:50:34+03:00 www: string,
+  id: 7 build date: 2008-09-14T04:25:34+03:00 www: string,
+]
+`;
+
+exports[`Compare functions should return 3 kidergardens with highset build date (ST) 3`] = `
+Array [
+  id: 1 build date: 2008-01-26T15:52:14+02:00 www: string,
+  id: 2 build date: 2020-09-29T07:58:57+03:00 www: string,
+  id: 3 build date: 2005-03-21T00:25:34+02:00 www: string,
+  id: 4 build date: 2017-07-29T22:50:34+03:00 www: string,
+  id: 5 build date: 2001-09-24T21:18:54+03:00 www: string,
+  id: 6 build date: 2002-01-19T15:05:34+02:00 www: string,
+  id: 7 build date: 2008-09-14T04:25:34+03:00 www: string,
+  id: 8 build date: 1998-08-04T21:32:14+03:00 www: string,
+  id: 9 build date: 2027-09-19T15:05:34+03:00 www: ,
+]
+`;

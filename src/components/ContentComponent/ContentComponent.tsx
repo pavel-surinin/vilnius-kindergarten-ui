@@ -12,7 +12,7 @@ export interface Kindergarten {
   id: number;
   label: string;
   address: string;
-  buildDate: string;
+  buildDate: number;
   elderate: string;
   email: string;
   phone: string;

@@ -54,4 +54,4 @@ exports[`Footer Component renders correctly 1`] = `
 </div>
 `;
 
-exports[`Footer Component renders mock date 1`] = `14823633672`;
+exports[`renders mock date 1`] = `14823633672`;
