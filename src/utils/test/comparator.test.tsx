@@ -2,7 +2,7 @@ import { fromArray } from '../comparator';
 import { Kindergarten } from '../../components/ContentComponent/ContentComponent';
 import * as moment from 'moment';
 
-const MOCK_GARDENS: Kindergarten[] = [
+export const MOCK_GARDENS: Kindergarten[] = [
   {
     id: 1,
     label: 'string',

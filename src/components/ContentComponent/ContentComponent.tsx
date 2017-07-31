@@ -28,15 +28,17 @@ export class ContentComponent extends React.Component<ContentComponentProps, {ga
   }
 
   componentWillMount() {
-    axios
-    .get('https://safe-mesa-80356.herokuapp.com/api/garden')
-    .then(res => this.setState({gardens: res.data}))
-    .catch(err => {throw new ReferenceError('Failed to load gardens data'); });
+    // axios
+    // .get('https://safe-mesa-80356.herokuapp.com/api/garden')
+    // .then(res => this.setState({gardens: res.data}))
+    // .catch(err => {throw new ReferenceError('Failed to load gardens data'); });
   }
 
   renderKindergartenList() {
     // create rows in table
-    const kindList = this.state.gardens.map((kin, idx, aaa) => {
+    const kindList = this.props.kindergartens
+      // .slice(0, 5)
+      .map((kin, idx, aaa) => {
       return (
         <tr key={idx}>
           <th scope="row">{idx + 1}</th>
@@ -65,7 +67,7 @@ export class ContentComponent extends React.Component<ContentComponentProps, {ga
   }
 
   render() {
-    return this.state.gardens.length === 0 ? <div>Loading...</div> : (
+    return this.props.kindergartens.length === 0 ? <div>Loading...</div> : (
       <div>
         {this.renderKindergartenList()}
       </div>);
