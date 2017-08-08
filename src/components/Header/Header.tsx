@@ -1,6 +1,6 @@
 import * as React from 'react';
 import './Header.css';
-
+import { NavBar } from '../NavBar/NavBar';
 interface HeaderProps {
   title: string;
   subTitle?: string;
@@ -17,6 +17,7 @@ export class Header extends React.Component<HeaderProps, {}> {
       <div  className="App-header">
         <h1>{this.props.title}</h1>
         {this.props.subTitle && <h3>{this.props.subTitle}</h3>}
+        <NavBar/>
       </div>
     );
   }
