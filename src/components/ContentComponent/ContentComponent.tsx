@@ -2,7 +2,7 @@ import * as React from 'react';
 import './content-component.css';
 import { Table } from 'reactstrap';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
+import { store } from '../../store/store';
 
 export interface ContentComponentProps {
   kindergartens: Kindergarten[];
@@ -28,6 +28,7 @@ export class ContentComponent extends React.Component<ContentComponentProps, {ga
   }
 
   componentWillMount() {
+    this.setState({gardens: store.getState().gardens});
     // axios
     // .get('https://safe-mesa-80356.herokuapp.com/api/garden')
     // .then(res => this.setState({gardens: res.data}))
@@ -67,7 +68,7 @@ export class ContentComponent extends React.Component<ContentComponentProps, {ga
   }
 
   render() {
-    return this.props.kindergartens.length === 0 ? <div>Loading...</div> : (
+    return !this.state.gardens ? <div>Loading...</div> : (
       <div>
         {this.renderKindergartenList()}
       </div>);

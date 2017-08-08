@@ -1,7 +1,9 @@
 import * as React from 'react';
 import './NavBar.css';
 import { NavLink } from '../NavLink/NavLink';
-import { Navbar, NavbarToggler, NavbarBrand, Collapse, Nav, NavItem } from 'reactstrap';
+import { Button, Navbar, NavbarToggler, NavbarBrand, Collapse, Nav, NavItem } from 'reactstrap';
+import { changeNameAction } from '../../store/actions';
+
 export class NavBar extends React.Component<{}, {isOpen: boolean}> {
   constructor(props: {}) {
     super(props);
@@ -9,6 +11,11 @@ export class NavBar extends React.Component<{}, {isOpen: boolean}> {
       isOpen: false
     };
   }
+
+  changeName = () => {
+    changeNameAction({id: 1, label: 'test'});
+  }
+
   toggle = () => {
     this.setState({isOpen: !this.state.isOpen});
   }
@@ -28,6 +35,11 @@ export class NavBar extends React.Component<{}, {isOpen: boolean}> {
               </NavItem>
               <NavItem>
                 <NavLink to="/test" title="Test"/>
+              </NavItem>
+              <NavItem>
+                <Button onClick={this.changeName}>
+                  change name
+                </Button>
               </NavItem>
             </Nav>
           </Collapse>

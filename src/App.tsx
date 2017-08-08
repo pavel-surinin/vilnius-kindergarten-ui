@@ -5,6 +5,7 @@ import { Header } from './components/Header/Header';
 import { NavBar } from './components/NavBar/NavBar';
 import { Footer } from './components/Footer/Footer';
 import { Garden } from './components/Garden/Garden';
+import { store } from './store/store';
 import './App.css';
 
 export class App extends React.Component<{}, {}> {
@@ -14,6 +15,7 @@ export class App extends React.Component<{}, {}> {
         <Header title="ReactHeader" />
         <NavBar/>
         <div className="app-content">
+          {store.getState().TTT}
           <Route exact={true} path="/" render={() => <p>home</p>}/>
           <Route path="/test" render={() => <p>test</p>}/>
           <Route path="/gardens" exact={true} component={ContentComponent}/>

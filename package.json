@@ -9,6 +9,7 @@
     "@types/react-dom": "^15.5.1",
     "@types/react-router-dom": "^4.0.7",
     "@types/reactstrap": "^4.3.8",
+    "@types/redux": "3.6.0",
     "axios": "^0.16.2",
     "bootstrap": "^4.0.0-alpha.6",
     "react": "^15.6.1",
@@ -17,7 +18,8 @@
     "react-dom": "^15.6.1",
     "react-router-dom": "^4.1.2",
     "react-scripts-ts": "2.4.0",
-    "reactstrap": "^4.8.0"
+    "reactstrap": "^4.8.0",
+    "redux": "3.7.2"
   },
   "devDependencies": {
     "@types/bootstrap": "^3.3.35",
