@@ -1,6 +1,6 @@
 ## Running Tests
 
-Create React App uses [Jest](https://facebook.github.io/jest/) as its test runner. 
+Create React App uses [Jest](https://facebook.github.io/jest/) as its test runner.
 
 
 Jest is a Node-based runner. This means that the tests always run in a Node environment and not in a real browser. This lets us enable fast iteration speed and prevent flakiness.
@@ -166,7 +166,7 @@ exports[`Header Component renders correctly 1`] = `
 
 ###TDD
 
-Lets assume that we want to validate input our form. So we need to create 
+Lets assume that we want to validate input our form. So we need to create
 function that returns `boolean` true in case if name is valid.
 
 ```typescript
@@ -230,3 +230,35 @@ Snapshots:   0 total
 Time:        0.392s, estimated 1s
 ```
 
+### Snapshot serializing
+
+To make snapshots more readable, you can customly serialize your snapshot.
+
+```typescript
+expect.addSnapshotSerializer({
+  test: (val: Kindergarten) => !!val.buildDate,
+  print: (val: Kindergarten) => `id: ${val.id} build date: ${moment(val.buildDate).format()} www: ${val.www}`
+});
+```
+
+```
+   Object {
+        "address": "string",
+        "buildDate": 1011445534677,
+        "elderate": "string",
+        "email": "string",
+        "id": 6,
+        "idFromSource": 2,
+        "label": "string",
+        "phone": "string",
+        "schoolType": "string",
+        "www": "string",
+      },
+      ...
+```
+After serializing:
+``` 
+ garden id: 8, date 902255534689,
+ garden id: 5, date 1001355534654,
+ garden id: 6, date 1011445534677,
+```
