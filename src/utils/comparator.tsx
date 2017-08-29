@@ -1,7 +1,7 @@
-import { Kindergarten } from '../components/ContentComponent/ContentComponent';
+import { Garden } from '../model/models';
 
 export const fromArray = {
-  get3Max: (gardens: Kindergarten[]) => {
+  get3Max: (gardens: Garden[]) => {
     const newGardens = gardens.concat();
     newGardens.sort((a, b) => {
       if (a.buildDate === b.buildDate) { return 0; }

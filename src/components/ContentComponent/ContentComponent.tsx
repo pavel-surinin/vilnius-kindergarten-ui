@@ -3,31 +3,40 @@ import './content-component.css';
 import { Table } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import { Garden } from '../../model/models';
 
 export interface ContentComponentProps {
-  kindergartens: Kindergarten[];
+  kindergartens: Garden[];
 }
 
-export interface Kindergarten {
-  id: number;
-  label: string;
-  address: string;
-  buildDate: number;
-  elderate: string;
-  email: string;
-  phone: string;
-  schoolType: string;
-  www: string;
-  idFromSource: number;
+interface ContentComponentState {
+  isLoading: boolean;
+  gardens: Garden[];
 }
 
-export class ContentComponent extends React.Component<ContentComponentProps, {gardens: Kindergarten[]}> {
+export class ContentComponent extends React.Component<ContentComponentProps, ContentComponentState> {
   constructor(props: ContentComponentProps) {
     super(props);
-    this.state = {gardens: []};
+
+    this.state = {
+      isLoading: true,
+      gardens: []
+    };
   }
 
   componentWillMount() {
+    axios
+      .get('https://safe-mesa-80356.herokuapp.com/api/garden')
+      .then(response => {
+          this.setState(
+            {
+              isLoading: false,
+              gardens: response.data
+            }
+          );
+    })
+      .catch(err => { throw new ReferenceError('Failed to fetch data'); } );
+
     // axios
     // .get('https://safe-mesa-80356.herokuapp.com/api/garden')
     // .then(res => this.setState({gardens: res.data}))
@@ -36,7 +45,7 @@ export class ContentComponent extends React.Component<ContentComponentProps, {ga
 
   renderKindergartenList() {
     // create rows in table
-    const kindList = this.props.kindergartens
+    const kindList = this.state.gardens
       // .slice(0, 5)
       .map((kin, idx, aaa) => {
       return (
@@ -67,9 +76,10 @@ export class ContentComponent extends React.Component<ContentComponentProps, {ga
   }
 
   render() {
-    return this.props.kindergartens.length === 0 ? <div>Loading...</div> : (
+    return this.state.isLoading ? <div>Loading...</div> : (
       <div>
         {this.renderKindergartenList()}
-      </div>);
+      </div>
+    );
   }
 }
